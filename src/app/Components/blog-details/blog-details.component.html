@@ -54,19 +54,22 @@
                                      <p class="desc" >{{comment.comment}} </p>
                                      <p class="date">{{comment.date | date: 'MMM d, y H:mm:ss' : '+0900'}}</p>
                                    </div>
-                                 
+                                   
+                                   
                                </div>
-                                 
+                               <!-- <div class="row">
+                                 <div class="col-sm-12">
+                                    <a><i class="fas fa-thumbs-up"></i></a> &nbsp;&nbsp;
+                                    <a><i class="fas fa-thumbs-down"></i></a>&nbsp;&nbsp;
+                                   
+                                 </div>
+                                 <div class="col-sm-12">  <input type="text" class="from-control"></div>
+
+                                 </div> -->
                                <hr/>
                             </ul>
                           </div>
                      </div>
-                     <hr/>
-
-
-
-                   
-             
                
     </div>
 
@@ -83,29 +86,3 @@
         </div>
       </ng-template>
 
-<!-- <div class="container">
-
-    <div class="row">
-        <div class="col-12">
-            <h1 style="text-align: center;">{{title}}</h1>
-            <br/><br/><br/>
-        </div>
-        <div class="col-12" style="text-align: center; padding-bottom: 20px;">{{content}}</div>
-        <hr>
-    </div>
-</div>
-
-<div class="container">
-<div class="col-sm-12">
-    <form  (ngSubmit) = "onSubmit()" style="padding: 40px;">
-        <div class="row">
-        <div class="col-lg-6">
-            <textarea name = "comment" [(ngModel)]="addcommentObj.comment" class="form-control marginBottom" placeholder = "Comment..."></textarea>
-        </div><br/>
-        <div class="col-lg-2" style="padding-top: 10px;">
-            <button type="submit" class="form-control"  class="btnedit btn-block mb-2" >Submit</button>
-        </div>
-     </div>
-  </form>
-</div>
-</div> -->

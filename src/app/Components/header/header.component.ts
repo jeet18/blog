@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
   @ViewChild('toggleBtn', { static: true })
   toggleBtn!: ElementRef;
 
+  
   constructor(private utilsService: UtilsService) { 
     
   }
