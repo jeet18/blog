@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light navbar-shadow">
+    <div class="container">
+      <h1>Blog</h1>
+      <button type="button" class="navbar-toggler collapsed" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown" [collapse]=isCollapsed>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/bloglist']" aria-current="page"  [routerLinkActive]="['active']">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/write-blog']"  [routerLinkActive]="['active']">Add Blog</a>
+          </li>
+        </ul>
+        <ul>
+        <div class="d-flex float-right">
+            <div class="user-info-row user-name text-primary">{{userName | uppercase}}</div>
+            <a *ngIf="userName != null" style="margin-left: 20px; color: blue;" (click)="logOut()">Log Out</a>
+            <a *ngIf="userName == null"  [routerLink]="['/login']" style="margin-left: 20px; color: blue;" (click)="logOut()">Log In</a>
+        </div>
+    </ul>
+
+      </div>
+    </div>
+  </nav>
