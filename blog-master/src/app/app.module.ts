@@ -16,6 +16,8 @@ import { WriteBlogComponent } from './Components/write-blog/write-blog.component
 import { BlogDetailsComponent } from './Components/blog-details/blog-details.component';
 import { AuthGuard } from './utils/auth/auth.guard';
 import { LoginService } from './utils/services/login.service';
+import { ParentComponent } from './Components/parent/parent.component';
+import { ChildComponent } from './Components/child/child.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { LoginService } from './utils/services/login.service';
     BloglistComponent,
     WriteBlogComponent,
     BlogDetailsComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,

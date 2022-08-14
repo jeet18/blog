@@ -27,13 +27,19 @@ export class BloglistComponent implements OnInit {
     this.userId = localStorage.getItem('userId');
   }
 
+  testing:any= [];
   public getAllBlog() {
     
   this.loginService.getAllBlog({...this.filterObj})
     .subscribe((res: any) => {
       if (res.status.code === 200) {
         this.blogArr = res.data;
-        console.log(this.blogArr)
+
+        this.testing = this.blogArr.filter((data: { title: string; }) => data.title == "Title ")
+
+        console.log(this.testing)
+
+
         this.totalCount = res.count
       } else {
         this.blogArr = [];

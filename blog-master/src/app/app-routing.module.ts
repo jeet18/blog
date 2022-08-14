@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogDetailsComponent } from './Components/blog-details/blog-details.component';
 import { BloglistComponent } from './Components/bloglist/bloglist.component';
+import { ChildComponent } from './Components/child/child.component';
 import { HomeComponent } from './Components/home/home.component';
 import { LoginComponent } from './Components/login/login.component';
+import { ParentComponent } from './Components/parent/parent.component';
 import { WriteBlogComponent } from './Components/write-blog/write-blog.component';
 import { AuthGuard } from './utils/auth/auth.guard';
 
@@ -21,7 +23,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'welcome',
+        redirectTo: 'bloglist',
         pathMatch: 'full',
         
       },
@@ -43,6 +45,16 @@ const routes: Routes = [
       {
         path: 'blogdetails/:id',
         component: BlogDetailsComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'parent',
+        component: ParentComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'child',
+        component: ChildComponent,
         canActivate: [AuthGuard]
       },
 
